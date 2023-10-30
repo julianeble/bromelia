@@ -174,7 +174,7 @@ def _convert_config_to_connection_obj(config) -> Connection:
         
         elif key == "TRANSPORT_TYPE":
 			if value not in ["TCP", "SCTP"]:
-                raise InvalidConfigValue("Invalid config value '{value}' "\
+				raise InvalidConfigValue("Invalid config value '{value}' "\
                                 f"found for config key '{key}'. It MUST be "\
                                 "either 'TCP' or 'SCTP'")
             transport_type = value
