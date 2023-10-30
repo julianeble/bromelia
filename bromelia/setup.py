@@ -142,9 +142,7 @@ class DiameterAssociation(object):
                                        self.connection.local_node.port)
            else:
                raise DiameterAssociationError("Invalid Diameter Agent transport type.")
-           else:
-               raise DiameterAssociationError("Invalid Diameter Agent mode.")
-
+               
         self.transport.start()
         self.transport.run()
 
