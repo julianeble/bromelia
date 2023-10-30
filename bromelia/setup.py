@@ -137,7 +137,7 @@ class DiameterAssociation(object):
            if self.connection.transport_type == DIAMETER_AGENT_TRANSPORT_TYPE_TCP:
                 self.transport = TcpServer(self.connection.local_node.ip_address,
                                         self.connection.local_node.port)
-            elif self.connection.transport_type == DIAMETER_AGENT_TRANSPORT_TYPE_SCTP:
+           elif self.connection.transport_type == DIAMETER_AGENT_TRANSPORT_TYPE_SCTP:
                 self.transport = SctpServer(self.connection.local_node.ip_address,
                                        self.connection.local_node.port)
              else:
