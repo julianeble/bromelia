@@ -140,11 +140,10 @@ class DiameterAssociation(object):
            elif self.connection.transport_type == DIAMETER_AGENT_TRANSPORT_TYPE_SCTP:
                 self.transport = SctpServer(self.connection.local_node.ip_address,
                                        self.connection.local_node.port)
-             else:
-                raise DiameterAssociationError("Invalid Diameter Agent transport type.")
-     
-        else:
-            raise DiameterAssociationError("Invalid Diameter Agent mode.")
+           else:
+               raise DiameterAssociationError("Invalid Diameter Agent transport type.")
+           else:
+               raise DiameterAssociationError("Invalid Diameter Agent mode.")
 
         self.transport.start()
         self.transport.run()
